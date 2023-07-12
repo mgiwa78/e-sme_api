@@ -8,20 +8,25 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 require("dotenv/config");
+const mongoose_1 = __importDefault(require("mongoose"));
 const app_1 = require("./app");
 const port = 5001;
 const start = () => __awaiter(void 0, void 0, void 0, function* () {
-    // if (!process.env.JWT_KEY) {
-    //   throw new Error("jwt key dose not exist");
-    // }
-    // try {
-    //   await mongoose.connect("mongodb://127.0.0.1:27017/e-sme");
-    //   console.log("connected");
-    // } catch (error) {
-    //   console.error(error);
-    // }
+    if (!process.env.JWT_KEY) {
+        throw new Error("jwt key dose not exist");
+    }
+    try {
+        yield mongoose_1.default.connect("mongodb://127.0.0.1:27017/e-sme");
+        console.log("connected");
+    }
+    catch (error) {
+        console.error(error);
+    }
     app_1.app.listen(port, () => {
         console.log(`Main Route on ${port}!!!!`);
     });

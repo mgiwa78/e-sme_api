@@ -10,7 +10,7 @@ import cors from "cors";
 
 const app = express();
 
-const whitelist = ["http://localhost:3011"];
+const whitelist = ["http://localhost:3012", "https://e-sme-app.vercel.app"];
 const corsOptions = {
   origin: function (origin: any, callback: any) {
     if (!origin || whitelist.indexOf(origin) !== -1) {
