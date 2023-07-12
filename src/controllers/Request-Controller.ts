@@ -3,7 +3,7 @@ import { Request, Response } from "express";
 import { User } from "../models/user";
 import { BadRequestError } from "../errors/bad-request-error";
 import jwt from "jsonwebtoken";
-import { SME } from "@models/sme";
+import { SME } from "../models/sme";
 
 export const Create__SME_REQUEST__POST = async (
   req: Request,

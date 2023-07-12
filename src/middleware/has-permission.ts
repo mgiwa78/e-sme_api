@@ -1,6 +1,6 @@
-import { AccessControlInstance } from "@services/access-control";
+import { AccessControlInstance } from "../services/access-control";
 import { NextFunction, Request, Response } from "express";
-import resolveUserRoles from "_utils/resolveUserRoles";
+import resolveUserRoles from "../_utils/resolveUserRoles";
 import { Permission } from "accesscontrol";
 
 const hasPermission = (action: string) => {

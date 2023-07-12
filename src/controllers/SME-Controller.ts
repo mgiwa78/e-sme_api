@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
 
-import { User } from "@models/user";
-import { BadRequestError } from "@errors/bad-request-error";
+import { User } from "../models/user";
+import { BadRequestError } from "../errors/bad-request-error";
 import jwt from "jsonwebtoken";
-import { SME } from "@models/sme";
+import { SME } from "../models/sme";
 import { query, validationResult, body } from "express-validator";
 
 export const Create__SME__POST = async (req: Request, res: Response) => {

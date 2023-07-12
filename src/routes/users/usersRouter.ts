@@ -2,7 +2,7 @@ import { Router } from "express";
 import {
   Create__USER__POST,
   Fetch__USERS__GET
-} from "controllers/User-Controller";
+} from "../../controllers/User-Controller";
 
 let userRouter = Router();
 
