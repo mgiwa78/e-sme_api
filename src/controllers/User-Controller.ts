@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 
-import { User } from "@models/user";
-import { BadRequestError } from "@errors/bad-request-error";
+import { User } from "../models/user";
+import { BadRequestError } from "../errors/bad-request-error";
 import jwt from "jsonwebtoken";
 
 export const Create__USER__POST = async (req: Request, res: Response) => {

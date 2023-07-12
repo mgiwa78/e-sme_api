@@ -3,9 +3,9 @@ import { Router } from "express";
 import authRouter from "./auth/authRouter";
 import userRouter from "./users/usersRouter";
 import organizationRouter from "./sme/sme";
-import { Create__SME_REQUEST__POST } from "controllers/Request-Controller";
+import { Create__SME_REQUEST__POST } from "../controllers/Request-Controller";
 import { body } from "express-validator";
-import { ValidateRequest } from "@middleware/validate-request";
+import { ValidateRequest } from "../middleware/validate-request";
 let rootRouter = Router();
 
 rootRouter.get("/", (req, res) => {

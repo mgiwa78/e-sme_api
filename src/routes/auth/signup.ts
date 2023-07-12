@@ -6,7 +6,7 @@ import { ValidateRequest } from "../../middleware/validate-request";
 
 import { User } from "../../models/user";
 import { BadRequestError } from "../../errors/bad-request-error";
-import { Create__USER__POST } from "controllers/User-Controller";
+import { Create__USER__POST } from "../../controllers/User-Controller";
 
 const signupRouter = express.Router();
 
