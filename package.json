@@ -5,15 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsnd --respawn -r tsconfig-paths/register src/index.ts",
-    "test": "jest --watchAll --no-cache",
     "build": "tsc"
-  },
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "node",
-    "setupFilesAfterEnv": [
-      "./src/tests/setup.ts"
-    ]
   },
   "keywords": [],
   "author": "",

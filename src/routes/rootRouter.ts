@@ -8,6 +8,10 @@ import { body } from "express-validator";
 import { ValidateRequest } from "@middleware/validate-request";
 let rootRouter = Router();
 
+rootRouter.get("/", (req, res) => {
+  res.send("Hey this is my API running 🥳");
+});
+
 rootRouter.use("/auth", authRouter);
 rootRouter.use("/organizations", organizationRouter);
 rootRouter.use("/users", userRouter);
