@@ -23,7 +23,7 @@ signupRouter.post(
     body("roles")
       .notEmpty()
       .withMessage("User roles are required")
-      .isIn(["Admin", "User", "Super Admin"])
+      .isIn(["Admin", "User", "Super Admin", "Founder", "founder"])
       .withMessage("Invalid user type"),
     body("password")
       .trim()

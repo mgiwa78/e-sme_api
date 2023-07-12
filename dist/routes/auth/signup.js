@@ -21,7 +21,7 @@ signupRouter.post("/", [
     (0, express_validator_1.body)("roles")
         .notEmpty()
         .withMessage("User roles are required")
-        .isIn(["Admin", "User", "Super Admin"])
+        .isIn(["Admin", "User", "Super Admin", "Founder", "founder"])
         .withMessage("Invalid user type"),
     (0, express_validator_1.body)("password")
         .trim()
