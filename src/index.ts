@@ -3,13 +3,14 @@ import mongoose from "mongoose";
 import { app } from "./app";
 
 const port = 5001;
+import { MONGO_URI } from "./constants/__CONSTANTS__";
 
 const start = async () => {
   if (!process.env.JWT_KEY) {
     throw new Error("jwt key dose not exist");
   }
   try {
-    await mongoose.connect("mongodb://127.0.0.1:27017/e-sme");
+    await mongoose.connect(`${MONGO_URI}`);
     console.log("connected");
   } catch (error) {
     console.error(error);

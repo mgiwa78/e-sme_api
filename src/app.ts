@@ -8,6 +8,7 @@ import { errorHandler } from "./middleware/error-handlers";
 import { NotFoundError } from "./errors/not-found-error";
 import cors from "cors";
 
+
 const app = express();
 
 const whitelist = ["http://localhost:3012", "https://e-sme-app.vercel.app"];

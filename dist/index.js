@@ -16,12 +16,13 @@ require("dotenv/config");
 const mongoose_1 = __importDefault(require("mongoose"));
 const app_1 = require("./app");
 const port = 5001;
+const __CONSTANTS__1 = require("./constants/__CONSTANTS__");
 const start = () => __awaiter(void 0, void 0, void 0, function* () {
     if (!process.env.JWT_KEY) {
         throw new Error("jwt key dose not exist");
     }
     try {
-        yield mongoose_1.default.connect("mongodb://127.0.0.1:27017/e-sme");
+        yield mongoose_1.default.connect(`${__CONSTANTS__1.MONGO_URI}`);
         console.log("connected");
     }
     catch (error) {
