@@ -45,7 +45,11 @@ const not_found_error_1 = require("./errors/not-found-error");
 const cors_1 = __importDefault(require("cors"));
 const app = (0, express_1.default)();
 exports.app = app;
-const whitelist = ["http://localhost:3012", "https://e-sme-app.vercel.app"];
+const whitelist = [
+    "http://localhost:3012",
+    "http://localhost:3013",
+    "https://e-sme-app.vercel.app"
+];
 const corsOptions = {
     origin: function (origin, callback) {
         if (!origin || whitelist.indexOf(origin) !== -1) {
